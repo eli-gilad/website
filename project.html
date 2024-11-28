@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CONTACT FORM</title>
+
+    <style>
+
+      body {
+        display: flex; /* Enable Flexbox */
+        flex-direction: column; /* Arrange items vertically */
+        justify-content: space-between;
+        align-items: center; /* Center items horizontally */
+        /* height: 100vh; Full viewport height. If you set an element’s height to 100vh, the element will stretch to fill the full height of the browser window. Issues in mobile devices */
+        font-family: Arial;
+        background-color: #f5f5f5;
+        margin: 60px 8px; /* 8px is the default margin of body element */
+        padding: 0; /* Default padding of body element */
+      }
+
+
+      h1 {
+        font-size: 2rem; /* Large font size */
+        text-align: center; /* Center horizontally */
+      }
+
+      .textarea-wrapper {
+        width: 100%; /* Makes the div span the full width */
+        /* max-width: 300px; Limit the width for mobile screens */
+        margin: 10px auto; /* Center the div on the page */
+      }
+
+      textarea {
+        display: block; /* Ensures block-like behavior */
+        width: 100%; /* Fills the entire width of the container */
+        height: 300px;
+        padding: 8px;
+        box-sizing: border-box; /* Ensures padding doesn't increase width */
+        font-family: Arial;
+        font-size: 1em;
+        line-height: 1.5;
+        resize: none; /* Prevents resizing */
+        border: 2px solid black;
+        border-radius: 3px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-family: Arial;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+
+
+  <body>
+
+      <h1>טופס יצירת קשר</h1>
+    
+      <div class="textarea-wrapper">
+        <textarea></textarea>
+      </div>
+  
+      <button>שליחה</button>
+    
+
+      <script>
+
+        function setBodyHeight() {
+          document.body.style.height = `${window.innerHeight}px`;
+        }
+
+        setBodyHeight();
+        window.addEventListener('resize', setBodyHeight);
+
+      </script>
+
+  </body>
+
+</html>
